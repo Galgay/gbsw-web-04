@@ -28,7 +28,7 @@ console.log(!null); // true
 // -> data가 null이거나 undefined인 경우, default를 반환.
 let email = "asdf";
 let result2 = (email !== null && email !== undefined) ? "이메일 확인" : "이메일 입력되지 않음";
-let result3 = (email ?? null)  ? "이메일 확인" : "이메일 입력되지 않음";
+let result3 = (email ?? null) ? "이메일 확인" : "이메일 입력되지 않음";
 
 console.log(result2);
 console.log(result3);
