@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>누적합</title>
+    </head>
+    <body>
+        <h2>누적합 구하기</h2>
+        <input
+            id="input_number"
+            type="number"
+            placeholder="정수를 입력하세요."
+        />
+        <button id="btn" type="button">완료</button>
+        <div id="result"></div>
+    </body>
+</html>
+<script>
+    // 1. 버튼이 클릭될 시, html input을 통해 정수 n을 입력받습니다.
+    // 2. 1 ~ n까지의 누적합을 반복문 이용해 계산합니다.
+    // 3. 누적합을 문서에 출력합니다.
+
+    // 버튼에 Click 이벤트 등록
+    document.getElementById("btn").onclick = function () {
+        // input 내 값 조회
+        const num = document.getElementById("input_number").value;
+        let result = 0;
+
+        // 1 ~ num까지 값 누적
+        for (let i = 1; i <= num; i++) {
+            result += i;
+        }
+
+        // result라는 id를 가진 div 태그 내용을 result로 변경
+        document.getElementById("result").textContent = result;
+    };
+</script>
