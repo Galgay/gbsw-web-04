@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./randomsnack.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>우리 반 간식 소개</h1>
+            <p>친구들과 먹고 싶은 간식을 소개하는 웹 페이지입니다.</p>
+            <!-- ./ -> 현재 폴더 -->
+            <!-- ../ -> 현재 폴더 기준 상위 폴더 -->
+            <!-- / -> 프로젝트 최상위 폴더 -->
+            <img src="./apple_img.jpg" alt="사과입니다." />
+            <div class="menu_box">
+                <h2>인기 간식</h2>
+                <ul id="menu_list"></ul>
+            </div>
+            <div class="menu_box">
+                <h2>간식 추가하기</h2>
+                <input
+                    id="input_snack"
+                    type="text"
+                    placeholder="추가할 간식 이름"
+                />
+                <button id="btn_add">추가</button>
+            </div>
+            <div class="event_box">
+                <h2>오늘의 간식</h2>
+                <p id="event_result">결과값 영역</p>
+                <button id="btn_event">간식 추첨</button>
+            </div>
+        </div>
+        <script src="./randomsnack.js"></script>
+    </body>
+</html>

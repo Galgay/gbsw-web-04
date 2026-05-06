@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="btn">버튼입니다.</button>
+    </body>
+    <script>
+        const first = function () {
+            alert("First Click");
+        };
+
+        const second = function () {
+            alert("Second Click");
+        };
+
+        const btn = document.getElementById("btn");
+
+        // onclick 이벤트 리스너를 덮어쓰는 경우,
+        // 마지막 덮어쓴 내용이 실행된다.
+        // btn.onclick = function () {}
+
+        // 한 이벤트에 여러 동작이 필요한 경우
+        // addEventListener를 이용해 이벤트 리스너를 여러 개 등록 가능하다
+        btn.addEventListener("click", first);
+        btn.addEventListener("click", second);
+    </script>
+</html>

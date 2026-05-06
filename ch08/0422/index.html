@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <style>
+            .todo_wrap ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .todo_wrap li {
+                width: 200px;
+                list-style: none;
+                padding: 20px 10px;
+                background-color: pink;
+                color: white;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all ease 0.5s;
+            }
+
+            .todo_wrap li:hover {
+                background-color: rgb(255, 148, 166);
+                scale: 1.08;
+            }
+            /* 체크박스 */
+            /* 마우스 올리면 색 다르게
+            리스트 아이템 추가 */
+        </style>
+    </head>
+    <body>
+        <div class="title_wrap">
+            <span id="title">Todo List</span>
+        </div>
+        <div class="todo_wrap">
+            <!-- unordered list -->
+            <!-- ordered list -->
+            <!-- description list -->
+            <ul id="todo_list">
+                <!-- list item -->
+                <li>기상하기</li>
+                <li>밥먹기</li>
+                <li>코딩하기</li>
+                <li>자기</li>
+            </ul>
+        </div>
+        <input id="input_todo_title" type="text" />
+        <button id="btn_add_todo_item">추가</button>
+    </body>
+    <script>
+        document.getElementById("btn_add_todo_item").onclick = function () {
+            const title = document.getElementById("input_todo_title").value;
+            const item = `<li>${title}</li>`;
+            let list = document.getElementById("todo_list");
+            list.insertAdjacentHTML("beforeend", item);
+        };
+    </script>
+</html>
