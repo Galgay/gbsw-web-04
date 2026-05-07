@@ -1,7 +1,8 @@
 let snacks = ["치즈 토스트", "딸기 에이드", "초코 쿠키"];
 
-const getRandomNumber = function (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = function (n) {
+    // return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * n);
 };
 
 document.getElementById("btn_event").onclick = function () {
